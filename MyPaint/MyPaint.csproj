@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FloodFillClass.cs" />
     <Compile Include="ShapeUtils\CircleShape.cs" />
     <Compile Include="ShapeUtils\EllipseShape.cs" />
     <Compile Include="Form1.cs">
@@ -71,14 +72,8 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,22 +88,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KijpaAazT.png" />
+    <None Include="Resources\rectangle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KijpaAazT1.png" />
+    <None Include="Resources\ellipse.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\4c9o5Xyoi1.png" />
+    <None Include="Resources\circle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\e81136ff89d964e1b8e8e4f7ff63d4cf-ellipse-by-vexels1.png" />
+    <None Include="Resources\line.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\4c9o5Xyoi2.png" />
+    <None Include="Resources\paintBucket.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\square1.png" />
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

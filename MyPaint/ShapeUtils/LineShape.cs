@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace MyPaint.ShapeUtils
 {
@@ -14,7 +15,7 @@ namespace MyPaint.ShapeUtils
         private Pen mPen;
         private Graphics mGraphic;
         private Point start;
-        private Point end;
+        private Point end;        
 
         protected Pen MPen
         {
@@ -80,13 +81,13 @@ namespace MyPaint.ShapeUtils
         }
 
         public override void draw()
-        {
+        {           
             MGraphic.DrawLine(MPen, Start, End);
         }
 
         public override void draw(PaintEventArgs e)
         {
-            this.MGraphic = e.Graphics;
+            this.MGraphic = e.Graphics;            
             MGraphic.DrawLine(MPen, Start, End);
         }
 
@@ -104,6 +105,25 @@ namespace MyPaint.ShapeUtils
             this.End = endPoint;
             this.MGraphic = e.Graphics;
             MGraphic.DrawLine(p, startPoint, endPoint);
+        }
+
+        public override void draw(Pen p, Point startPoint, Point endPoint, Graphics g)
+        {
+            mGraphic = g;
+            this.MPen = new Pen(p.Color, p.Width);
+            Start = startPoint;
+            End = endPoint;
+
+            MGraphic.DrawLine(p, startPoint, endPoint);
+            //paintColor();
+        }
+
+        public override void fillColor(Color color)
+        {            
+        }
+
+        public override void fillColor(Color x, Color y)
+        {            
         }
     }
 }
